@@ -1,6 +1,11 @@
 import Reveal from './Reveal.jsx'
 import { ArrowUpRight } from './Icons.jsx'
 
+// Prefix a public asset path with Vite's base URL so it resolves both in local
+// dev ("/") and under the GitHub Pages sub-path ("/MJEED-PORTFOLIO/"). Vite does
+// not rewrite absolute string-literal paths, so we do it explicitly here.
+const asset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
+
 const projects = [
   {
     index: '01',
@@ -158,7 +163,7 @@ function PhoneGallery({ shots, variant = 'device' }) {
           <li key={shot.src} className="shrink-0 snap-start">
             <figure className="flex flex-col items-center">
               <img
-                src={shot.src}
+                src={asset(shot.src)}
                 alt={shot.alt}
                 loading="lazy"
                 className={imgClass}
@@ -190,7 +195,7 @@ function ResponsiveShowcase({ desktop, phones }) {
     <div className="min-w-0">
       <figure className="drop-shadow-2xl">
         <img
-          src={desktop.src}
+          src={asset(desktop.src)}
           alt={desktop.alt}
           loading="lazy"
           className="mx-auto w-full max-w-[560px] transition-transform duration-500 ease-out hover:-translate-y-1"
@@ -200,7 +205,7 @@ function ResponsiveShowcase({ desktop, phones }) {
         {phones.map((phone) => (
           <figure key={phone.src} className="flex flex-col items-center">
             <img
-              src={phone.src}
+              src={asset(phone.src)}
               alt={phone.alt}
               loading="lazy"
               className="w-[132px] rounded-xl shadow-2xl shadow-black/40 ring-1 ring-white/10 transition-transform duration-500 ease-out hover:-translate-y-1.5 sm:w-[150px]"
@@ -234,7 +239,7 @@ function ProjectCard({ project, reverse, first }) {
           <div className="group relative">
             <div className="overflow-hidden rounded-2xl bg-white/5 shadow-2xl shadow-black/30 ring-1 ring-white/15">
               <img
-                src={project.image}
+                src={asset(project.image)}
                 alt={project.alt}
                 loading="lazy"
                 className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
