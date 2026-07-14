@@ -1,0 +1,15 @@
+# Dependencies & build output
+node_modules
+dist
+dist-ssr
+
+# Local env & editor/tooling config
+*.local
+.claude/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+npm-debug.log*
+logs
+*.log
