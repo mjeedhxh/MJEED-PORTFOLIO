@@ -23,16 +23,16 @@ const reports = [
     image: '/reports/nathr.webp',
     file: '/reports/nathr-report.pdf',
     description:
-      'A UI/UX report for Nathr, a digital-library reading app — the research and interface decisions behind an innovative, responsive reading experience.',
+      'My UI design project for Nathr, a digital-library app — designing every interface in Figma (login, book lists, profile, and customizable reading with dark mode and font sizing) to elevate the digital reading experience.',
   },
   {
     id: 'serialized',
     title: 'Serialized App',
-    kicker: 'UX Design Process',
+    kicker: 'UX/UI Analysis',
     image: '/reports/serialized-app.webp',
     file: '/reports/serialized-app.pdf',
     description:
-      'A UX case study for a serialized-content app (series & episodes), walking the design process from prototyping through usability testing, validation, and iteration.',
+      'A UX/UI analysis of Serialized, a TV-show & episode tracking app — evaluated through the full app design cycle and benchmarked against Letterboxd.',
   },
   {
     id: 'a11y-games',
@@ -41,7 +41,7 @@ const reports = [
     image: '/reports/accessibility-in-games.webp',
     file: '/reports/accessibility-in-games.pdf',
     description:
-      'A research report on accessibility in video games — how inclusive design choices make games more playable and welcoming for people with disabilities.',
+      'A research report on accessibility for visual impairment and colour blindness in games — analysing the accessibility features of Ghost of Tsushima, Celeste, and Silent Hill 2 Remake against WCAG.',
   },
 ]
 
